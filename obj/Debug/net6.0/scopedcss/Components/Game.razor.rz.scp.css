@@ -1,0 +1,17 @@
+.choosen-image[b-ri4nt2vcc2] 
+{
+    font-size: 128px;
+    text-shadow: 0 0 20px #101820FF;
+}
+
+.image-to-choose[b-ri4nt2vcc2] 
+{
+    font-size: 64px;
+    text-shadow: 0 0 20px #101820FF;
+    cursor: pointer;
+}
+
+.image-to-choose:hover[b-ri4nt2vcc2] 
+{
+    transform: scale(1.5);
+}

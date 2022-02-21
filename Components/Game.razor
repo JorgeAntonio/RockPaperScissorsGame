@@ -1,0 +1,50 @@
+﻿<!-- INJECTAMOS LA CLASE CHOICES -->
+@inject Choices choices
+
+<div class="container text-center">
+
+    <div class="jumbotron">
+        <h1 class="display-3">Piedra | Papel | Tijera</h1>
+        <p class="lead">El juego mas cool del mundo</p>
+        <hr class="my-2">
+    </div>
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-6 text-center text-uppercase">Score del Jugador: <h2>@playerScore</h2></div>
+            <div class="col-6 text-center text-uppercase">Score del computador: <h2>@computerScore</h2></div>
+        </div>
+        
+        <div class="row mt-3" style="height: 200px;">
+            <div class="col-6 text-center choosen-image">
+                @playerChoiceImage
+            </div>
+            <div class="col-6 text-center choosen-image">
+                @computerChoiceImage
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <h3>@message</h3>
+        </div>
+
+    </div>
+    <div class="row mt-3">
+        @foreach (var i in Enumerable.Range(0, 3))
+        {
+            // USAR LA CLASE CHOICES COMO UN ARRAY Y DARLE UN INDEX PARA MOSTRAR UNA IMAGEN
+            var choice = i;
+            <div class="col-4 text-center image-to-choose" @onclick="(()=> OnPlayerMadeChoice(choice))">
+
+                @choices[i]
+
+            </div>
+        }
+    </div>
+    <div class="text-center mt-5">
+        <button class="btn btn-primary btn-block" @onclick="Reset">Restablecer</button>
+    </div>
+</div>
+
+@code {
+
+}
